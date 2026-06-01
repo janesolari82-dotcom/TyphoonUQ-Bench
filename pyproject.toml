@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typhoonuq-bench"
+version = "0.1.0"
+description = "TyphoonUQ-Bench: a reproducible multi-agency uncertainty benchmark for typhoon intensity from satellite imagery."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "TyphoonUQ-Bench Authors" }
+]
+keywords = [
+  "tropical cyclone",
+  "typhoon",
+  "uncertainty quantification",
+  "satellite imagery",
+  "benchmark",
+  "Digital Typhoon",
+  "JMA",
+  "IBTrACS",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
+dependencies = [
+  "h5py>=3.10",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "pyarrow>=14.0",
+  "pillow>=10.0",
+  "pyyaml>=6.0",
+  "scikit-learn>=1.3",
+  "requests>=2.31",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+ml = [
+  "xgboost>=2.0",
+  "torch>=2.2",
+  "torchvision>=0.17",
+]
+figures = [
+  "matplotlib>=3.7",
+  "scipy>=1.11",
+  "seaborn>=0.13",
+]
+dev = [
+  "pytest>=7.0",
+  "ruff>=0.4",
+  "mypy>=1.5",
+]
+
+[project.scripts]
+typhoonuq-dt-build-index   = "typhoonuq.cli:build_index_main"
+typhoonuq-build-manifest   = "typhoonuq.cli:build_manifest_main"
+typhoonuq-make-splits      = "typhoonuq.cli:make_splits_main"
+typhoonuq-train-metadata   = "typhoonuq.cli:train_metadata_main"
+typhoonuq-train-torch      = "typhoonuq.cli:train_torch_main"
+
+[project.urls]
+"Source"    = "https://github.com/<org>/TyphoonUQ-Bench"
+"Issues"    = "https://github.com/<org>/TyphoonUQ-Bench/issues"
+"Dataset"   = "https://doi.org/10.5281/zenodo.<doi>"
+
+[tool.setuptools.packages.find]
+where   = ["src"]
+include = ["typhoonuq*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501"]

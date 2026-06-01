@@ -1,0 +1,34 @@
+digital_typhoon:
+  storm_id: storm_id
+  storm_name: storm_name
+  season: season
+  basin: basin
+  timestamp: timestamp
+  image_ref: image_ref
+  quality_flag: quality_flag
+  lat: lat
+  lon: lon
+
+ibtracs:
+  storm_id: sid
+  storm_name: name
+  season: season
+  basin: basin
+  timestamp: iso_time
+  lat: lat
+  lon: lon
+  pressure:
+    jma: tokyo_pres
+    jtwc: usa_pres
+    cma: cma_pres
+    hko: hko_pres
+  wind:
+    jma: tokyo_wind
+    jtwc: usa_wind
+    cma: cma_wind
+    hko: hko_wind
+  wind_avg_period:
+    jma: 10min
+    jtwc: 1min
+    cma:
+    hko:

@@ -1,0 +1,9 @@
+metric,value
+benchmark_storms,903.0
+labeled_timestamps,60581.0
+full_manifest_timestamps,180363.0
+image_ready_fraction,0.9694128522143907
+pressure_range_median,2.0
+pressure_range_p90,10.0
+pressure_range_p99,20.0
+pressure_range_max,47.0

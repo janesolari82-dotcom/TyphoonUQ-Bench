@@ -1,0 +1,27 @@
+project:
+  name: TyphoonUQ-Bench
+  basin: WP
+  year_min: 1988
+  year_max: 2023
+  history_hours: 6
+  image_size: 224
+
+manifest:
+  agency_coverage_threshold: 0.25
+  consensus_target: pressure_consensus_median
+  source_match_tolerance_minutes: 0
+  keep_raw_wind_columns: true
+
+splits:
+  forward_main:
+    train: [1988, 2015]
+    val: [2016, 2019]
+    test: [2020, 2023]
+
+training:
+  batch_size: 8
+  num_workers: 2
+  max_epochs: 3
+  learning_rate: 0.0003
+  target_coverage: 0.8
+
