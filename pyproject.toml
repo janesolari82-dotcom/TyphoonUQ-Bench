@@ -68,9 +68,9 @@ typhoonuq-train-metadata   = "typhoonuq.cli:train_metadata_main"
 typhoonuq-train-torch      = "typhoonuq.cli:train_torch_main"
 
 [project.urls]
-"Source"    = "https://github.com/<org>/TyphoonUQ-Bench"
-"Issues"    = "https://github.com/<org>/TyphoonUQ-Bench/issues"
-"Dataset"   = "https://doi.org/10.5281/zenodo.<doi>"
+"Source"    = "https://github.com/janesolari82-dotcom/TyphoonUQ-Bench"
+"Issues"    = "https://github.com/janesolari82-dotcom/TyphoonUQ-Bench/issues"
+"Dataset"   = "https://doi.org/10.5281/zenodo.20482461"
 
 [tool.setuptools.packages.find]
 where   = ["src"]

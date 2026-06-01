@@ -56,12 +56,12 @@ the upstream terms whenever they redistribute raw or near-raw assets.
 Please cite all relevant works when using TyphoonUQ-Bench in publications.
 
 ```bibtex
-@article{typhoonuq2026,
-  title   = {{TyphoonUQ-Bench}: a reproducible multi-agency uncertainty benchmark
-             for typhoon intensity from satellite imagery},
+@dataset{typhoonuq_data_2026,
+  title   = {{TyphoonUQ-Bench} v1: aligned manifest, splits, and sample caches},
   author  = {Gao, Yang and Su, Junchao and Zhou, Jingzhi and Meng, Fan},
-  journal = {Frontiers of Computer Science},
   year    = {2026},
+  doi     = {10.5281/zenodo.20482461},
+  url     = {https://doi.org/10.5281/zenodo.20482461},
 }
 
 @inproceedings{kitamoto2023digital,

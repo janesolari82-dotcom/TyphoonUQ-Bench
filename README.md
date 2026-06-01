@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org)
-[![Data DOI](https://img.shields.io/badge/data-Zenodo-blueviolet.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![Data DOI](https://img.shields.io/badge/data-Zenodo-blueviolet.svg)](https://doi.org/10.5281/zenodo.20482461)
 
 TyphoonUQ-Bench links Digital Typhoon satellite imagery, JMA RSMC best-track records, and the IBTrACS multi-agency archive into a single aligned manifest, defines three uncertainty-quantification tracks (`analysis-0h`, `forecast-6h`, `forecast-12h`) on a fixed chronological year split, and ships three baseline families (five concrete configurations) together with an evaluation suite that scores point accuracy, interval calibration, and range-aware metrics against the inter-agency pressure spread.
 
@@ -20,8 +20,8 @@ TyphoonUQ-Bench links Digital Typhoon satellite imagery, JMA RSMC best-track rec
 6. [Tracks, splits, and the evaluation suite](#6-tracks-splits-and-the-evaluation-suite)
 7. [Built-in baselines](#7-built-in-baselines)
 8. [Plugging in an external UQ model](#8-plugging-in-an-external-uq-model)
-9. [Reproducing the paper figures](#9-reproducing-the-paper-figures)
-10. [Citation and licensing](#10-citation-and-licensing)
+9. [Reproducing benchmark figures](#9-reproducing-benchmark-figures)
+10. [Data citation and licensing](#10-data-citation-and-licensing)
 
 ---
 
@@ -134,7 +134,7 @@ The companion Zenodo bundle ships the contents of `data/processed/` and `outputs
 Python ≥ 3.10 is required.
 
 ```bash
-git clone https://github.com/<org>/TyphoonUQ-Bench.git
+git clone https://github.com/janesolari82-dotcom/TyphoonUQ-Bench.git
 cd TyphoonUQ-Bench
 
 # Editable install
@@ -185,7 +185,7 @@ The per-folder `README.md` files inside `data/` reproduce this layout for new us
 
 ### 4.2 Derived artefacts (Zenodo mirror)
 
-If you only want to consume the benchmark without re-running the build pipeline, fetch the companion Zenodo bundle (`Zenodo/` mirror in this release; DOI in [§10](#10-citation-and-licensing)). The derived parquets are binary-identical to what `02_benchmark_construction/01_build_aligned_manifest.py` and `02_benchmark_construction/02_make_forward_splits.py` produce locally:
+If you only want to consume the benchmark without re-running the build pipeline, fetch the companion Zenodo bundle (`Zenodo/` mirror in this release; DOI in [§10](#10-data-citation-and-licensing)). The derived parquets are binary-identical to what `02_benchmark_construction/01_build_aligned_manifest.py` and `02_benchmark_construction/02_make_forward_splits.py` produce locally:
 
 ```
 benchmark/benchmark_manifest.parquet                  8.2 MB
@@ -379,9 +379,9 @@ A typical output (the v1 reference run of `image_resnet18` on `forecast-12h`, sc
 
 ---
 
-## 9. Reproducing the paper figures
+## 9. Reproducing benchmark figures
 
-The paper's figures are driven by the eight CSVs under `06_paper_figures/source_data/`. The figure script reads these CSVs (not training outputs), so figures can be regenerated even if model checkpoints are not available.
+The benchmark figures are driven by the eight CSVs under `06_paper_figures/source_data/`. The figure script reads these CSVs (not training outputs), so figures can be regenerated even if model checkpoints are not available.
 
 ```bash
 python 06_paper_figures/01_make_paper_figures.py
@@ -391,24 +391,17 @@ To regenerate the source CSVs themselves, re-train the baselines and use the hel
 
 ---
 
-## 10. Citation and licensing
+## 10. Data citation and licensing
 
-### 10.1 Citing the benchmark
+### 10.1 Citing the dataset
 
 ```bibtex
-@article{typhoonuq2026,
-  title   = {{TyphoonUQ-Bench}: a reproducible multi-agency uncertainty benchmark
-             for typhoon intensity from satellite imagery},
-  author  = {Gao, Yang and Su, Junchao and Zhou, Jingzhi and Meng, Fan},
-  journal = {Frontiers of Computer Science},
-  year    = {2026},
-}
-
 @dataset{typhoonuq_data_2026,
   title   = {{TyphoonUQ-Bench} v1: aligned manifest, splits, and sample caches},
   author  = {Gao, Yang and Su, Junchao and Zhou, Jingzhi and Meng, Fan},
   year    = {2026},
-  doi     = {10.5281/zenodo.XXXXXXX},
+  doi     = {10.5281/zenodo.20482461},
+  url     = {https://doi.org/10.5281/zenodo.20482461},
 }
 ```
 

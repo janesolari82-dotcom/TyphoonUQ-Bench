@@ -270,7 +270,7 @@ python external_models/tc_qformer/aggregate_metrics.py \
 
 ---
 
-## Stage 6 — Regenerate the paper figures
+## Stage 6 — Regenerate benchmark figures
 
 The figures are driven by the eight CSVs under
 `06_paper_figures/source_data/`, so they regenerate even without training
