@@ -398,7 +398,7 @@ To regenerate the source CSVs themselves, re-train the baselines and use the hel
 ```bibtex
 @dataset{typhoonuq_data_2026,
   title   = {{TyphoonUQ-Bench} v1: aligned manifest, splits, and sample caches},
-  author  = {Gao, Yang and Su, Junchao and Zhou, Jingzhi and Meng, Fan},
+  author  = {Gao, Yang and Su, Junchao and Zhou, Jingzhi },
   year    = {2026},
   doi     = {10.5281/zenodo.20482461},
   url     = {https://doi.org/10.5281/zenodo.20482461},
